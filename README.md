@@ -1,5 +1,7 @@
 # React Portfolio Template
 
+SEE IT RUNNUNG: https://joeboylson.github.io/react-portfolio-template/
+
 The goal of this project was to take the Create React App and apply a template over it specifically for a portfolio website (it could be used for other things as well). I tried to keep the CSS to a minimum but give a nice layer of usable UI so anyone can quickly plug in a few pages and publish.
 
 Many projects use React Router, but I decided to implement a simpler solution. With React.CSSProperties and React.useState, I was able to implement a "routing" system that boils down to pure CSS (i.e. translateX and opacity). This reduces the size of the entire application and allows for nice page-to-page animations (also with CSS).
