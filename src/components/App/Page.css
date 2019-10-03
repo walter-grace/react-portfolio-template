@@ -1,0 +1,9 @@
+.page {
+  position: absolute;
+  width: calc(100% - 144px);
+  transition-duration: 1s; 
+  transition-timing-function: cubic-bezier(.68,0,.32,1);
+  overflow: scroll;
+
+  padding: 72px;
+}
