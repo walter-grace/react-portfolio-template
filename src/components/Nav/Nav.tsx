@@ -1,6 +1,6 @@
 import React from 'react';
 import './Nav.css'
-import { Icon } from 'antd'; //antd has cool icons
+import { Menu, Close } from '@material-ui/icons';
 
 export interface PageProps {
   style?: any;
@@ -36,7 +36,7 @@ const Nav: React.FC<PageProps> = (Props) => {
         id={'nav-expand'}
         style={{...Props.style, ...navExpandStyle}}
       >
-        <Icon type={`${expanded ? 'close' : 'menu'}`}/>
+        { expanded ? <Close /> : <Menu /> }
       </div>
 
       {/* use passed setpage property to set 'page' in App.tsx */}
