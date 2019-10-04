@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
+import {PageNameProps} from '../App/App';
+
 
 export interface LandingPageProps {
-  continue: any;
+  setPage: Dispatch<SetStateAction<PageNameProps['pageNames']>>
 }
 
 const LandingPage: React.FC<LandingPageProps> = (Props) => {
@@ -19,8 +21,8 @@ const LandingPage: React.FC<LandingPageProps> = (Props) => {
         <br/><br/>
       </div>
 
-      {/* use passed continue property to set 'page' in App.tsx */}
-      <div onClick={() => Props.continue(1)} style={{cursor: 'pointer'}}>
+      {/* use passed setPage property to set 'page' in App.tsx */}
+      <div onClick={() => Props.setPage('home')} style={{cursor: 'pointer'}}>
         <p>Continue to Home</p>
       </div>
     </div>

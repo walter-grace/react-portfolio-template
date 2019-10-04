@@ -41,10 +41,10 @@ const Nav: React.FC<PageProps> = (Props) => {
 
       {/* use passed setpage property to set 'page' in App.tsx */}
       <div id='nav' style={{...Props.style, ...navStyle}}>
-        <h1 onClick={() => {Props.setPage(0); setExpanded(false)}}>Landing Page</h1>
-        <h1 onClick={() => {Props.setPage(1); setExpanded(false)}}>Home</h1>
-        <h1 onClick={() => {Props.setPage(2); setExpanded(false)}}>About</h1>
-        <h1 onClick={() => {Props.setPage(3); setExpanded(false)}}>Contact</h1>
+        <h1 onClick={() => {Props.setPage('landingpage'); setExpanded(false)}}>Landing Page</h1>
+        <h1 onClick={() => {Props.setPage('home'); setExpanded(false)}}>Home</h1>
+        <h1 onClick={() => {Props.setPage('about'); setExpanded(false)}}>About</h1>
+        <h1 onClick={() => {Props.setPage('contact'); setExpanded(false)}}>Contact</h1>
       </div>
     </div>
   );

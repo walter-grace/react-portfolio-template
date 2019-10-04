@@ -7,27 +7,34 @@ import Page from './Page';
 // pages
 import LandingPage from '../Pages/LandingPage';
 import Home from '../Pages/Home';
-import Contact from '../Pages/Contact';
 import About from '../Pages/About';
+import Contact from '../Pages/Contact';
 
+// add your page name here
+export interface PageNameProps {
+  pageNames: 'landingpage' | 'home' | 'about' | 'contact'
+}
 
 const App: React.FC = () => {
 
 
-  const [page, setPage] = React.useState(0)
+  const [page, setPage] = React.useState<PageNameProps['pageNames']>('landingpage')
 
   // do not display nav if on landing page
   const navStyle = {
-    opacity: `${page > 0 ? 1 : 0}`,
-    pointerEvents: `${page > 0 ? '' : 'none'}`,
+    opacity: `${page !== 'landingpage' ? 1 : 0}`,
+    pointerEvents: `${page !== 'landingpage' ? '' : 'none'}`,
     transitionDuration: '0.5s'
   } as React.CSSProperties;
 
   // hide page if not current page
-  const pageStyle = (pageNumber:number) => {
+  const pageStyle = (pageName:PageNameProps['pageNames']) => {
+
+    console.log(pageName, page)
+
     return {
-      transform: `translateX(${ pageNumber === page ? '0' : '-100%' })`,
-      opacity: `${ pageNumber === page ? '1' : '0' }`,
+      transform: `translateX(${ pageName === page ? '0' : '-100%' })`,
+      opacity: `${ pageName === page ? '1' : '0' }`,
       transitionDelay: '0.25s'
     } as React.CSSProperties;
   }  
@@ -43,19 +50,19 @@ const App: React.FC = () => {
 
         {/* pass in setPage function */}
         {/* call pageStyle() to return styling specific to each page */}
-        <Page style={pageStyle(0)}>
-          <LandingPage continue={setPage}/>
+        <Page style={pageStyle('landingpage')}>
+          <LandingPage setPage={setPage}/>
         </Page>
 
-        <Page style={pageStyle(1)}>
+        <Page style={pageStyle('home')}>
           <Home />
         </Page>
 
-        <Page style={pageStyle(2)}>
+        <Page style={pageStyle('about')}>
           <About />
         </Page>
 
-        <Page style={pageStyle(3)}>
+        <Page style={pageStyle('contact')}>
           <Contact />
         </Page>
       </main>
