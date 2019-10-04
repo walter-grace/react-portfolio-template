@@ -1,4 +1,5 @@
 import React from 'react';
+import './Nav.css'
 import { Icon } from 'antd'; //antd has cool icons
 
 export interface PageProps {
@@ -21,9 +22,9 @@ const Nav: React.FC<PageProps> = (Props) => {
 
   // icon styling
   const navExpandStyle = {
-    transform: `translateY(${expanded ? '70vh' : '0'})`,
-    top: `10vh`,
-    right: '10vh'
+    transform: `translateY(${expanded ? 'calc(100vh - (var(--space) * 4))' : '0'})`,
+    top: `var(--space)`,
+    right: 'var(--space)'
   }
 
   return (

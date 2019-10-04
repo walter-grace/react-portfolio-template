@@ -1,9 +1,12 @@
 .page {
   position: absolute;
-  width: calc(100% - 144px);
+  width: calc(100% - (var(--space) * 2));
   transition-duration: 1s; 
   transition-timing-function: cubic-bezier(.68,0,.32,1);
   overflow: scroll;
+  padding: var(--space);
+}
 
-  padding: 72px;
+.page h1 {
+  padding-bottom: var(--space);
 }

@@ -11,3 +11,13 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+:root {
+  --space: 72px;
+}
+
+@media only screen and (max-width: 550px) {
+  :root {
+    --space: 36px;
+  }
+}

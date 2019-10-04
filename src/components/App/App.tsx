@@ -28,6 +28,7 @@ const App: React.FC = () => {
     return {
       transform: `translateX(${ pageNumber === page ? '0' : '-100%' })`,
       opacity: `${ pageNumber === page ? '1' : '0' }`,
+      transitionDelay: '0.25s'
     } as React.CSSProperties;
   }  
 
