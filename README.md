@@ -28,8 +28,6 @@ const pageStyle = (pageNumber:number) => {
 
 > This is a simple solution that I really like - and the fact that it uses CSS is also pretty great.
 
-I've used no additional packages for in this solution, with the exception of Ant Design's `ants` package - and I've only used it for an icon (the nav icon).
-
 ---
 
 To run, make sure you have yarn installed: https://www.npmjs.com/package/yarn
