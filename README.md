@@ -1,41 +1,6 @@
 # React Portfolio Template
-
+code forked from
 SEE IT RUNNUNG: https://joeboylson.github.io/react-portfolio-template/
-
-The goal of this project was to take the Create React App and apply a template over it specifically for a portfolio website (it could be used for other things as well). I tried to keep the CSS to a minimum but give a nice layer of usable UI so anyone can quickly plug in a few pages and publish.
-
-Many projects use React Router, but I decided to implement a simpler solution. With React.CSSProperties and React.useState, I was able to implement a "routing" system that boils down to pure CSS (i.e. translateX and opacity). This reduces the size of the entire application and allows for nice page-to-page animations (also with CSS).
-
-Here's how the routing system works:
-
-> In App.tsx, there is a state variable simply called `page`. It holds a number (0-3 in the default template). Through the use of the React useState hook, you can change this number with `setPage()`
-
-```
-const [page, setPage] = React.useState(0)
-```
-
-> On the same page, there is a function called `pageStyle()` that return a React.CSSProperties variable. This function compares the passed value `pageNumber` with `page`. If they are the same, the page will appearmove into the viewport - otherwise it will move out of the viewport.
-
-```
-// hide page if not current page
-const pageStyle = (pageNumber:number) => {
-  return {
-    transform: `translateX(${ pageNumber === page ? '0' : '-100%' })`,
-    opacity: `${ pageNumber === page ? '1' : '0' }`,
-  } as React.CSSProperties;
-}  
-```
-
-> This is a simple solution that I really like - and the fact that it uses CSS is also pretty great.
-
----
-
-To run, make sure you have yarn installed: https://www.npmjs.com/package/yarn
-```
-$ yarn -v
-1.15.2 
-
-# your version maybe different but that's probably OK
 ```
 
 Next run `yarn install` which will install all the necessary packages.
