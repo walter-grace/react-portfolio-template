@@ -1,0 +1,53 @@
+{
+  "name": "react-portfolio-template",
+  "homepage": "https://joeboylson.github.io/react-portfolio-template/",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.5.0",
+    "@material-ui/icons": "^4.4.3",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.9",
+    "@types/react": "16.9.4",
+    "@types/react-dom": "16.9.1",
+    "framer-motion": "^1.11.1",
+    "gh-pages": "^2.1.1",
+    "netlify-lambda": "^1.6.3",
+    "react": "^16.10.1",
+    "react-addons-perf": "^15.4.2",
+    "react-cool-img": "^1.2.1",
+    "react-dom": "^16.10.1",
+    "react-router-dom": "^4.1.2",
+    "react-scripts": "3.2.0",
+    "react-sizeme": "^2.3.4",
+    "react-spring": "^8.0.27",
+    "react-three-fiber": "^4.2.12",
+    "stats.js": "^1.0.0",
+    "three": "^0.86.0",
+    "typescript": "3.6.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "postinstall": "netlify-lambda install",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

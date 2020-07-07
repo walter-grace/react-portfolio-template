@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1F1f1f
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --space: 72px;
+}
+
+@media only screen and (max-width: 550px) {
+  :root {
+    --space: 36px;
+  }
+}
