@@ -1,6 +1,5 @@
 # React Portfolio Template
-code forked from
-SEE IT RUNNUNG: https://joeboylson.github.io/react-portfolio-template/
+code forked from https://joeboylson.github.io
 ```
 
 Next run `yarn install` which will install all the necessary packages.
